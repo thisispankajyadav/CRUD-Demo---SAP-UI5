@@ -1,0 +1,24 @@
+<mvc:View controllerName="CRUDDemo.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <List id="list" items="{/Categories}" mode="SingleSelect">
+                            <items>
+                                <StandardListItem title="{ID}" description="{Name}"></StandardListItem>
+                            </items>
+                        </List>
+                        <VBox>
+                            <Input placeholder="Enter the ID for the category" id="idinput"/>
+                            <Input placeholder="Enter the category name" id="nameinput"/>
+                            <Button text="Create" press="createData"/>
+                            <Button text="Update" press="updateData"/>
+                            <Button text="Delete" press="deleteData"/>
+                        </VBox>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
